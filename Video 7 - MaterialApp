@@ -1,0 +1,69 @@
+import 'package:flutter/material.dart';
+
+class MaterialWidget extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => MyStateFul();
+}
+
+class MyStateFul extends State<MaterialWidget> {
+  int _value = 0;
+
+  void _increment() {
+    _value++;
+    print('incrementado');
+  }
+  void _decrement() {
+    if(_value > 0){
+      _value--;
+      print('Decrementar');
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'App',
+      home: Scaffold(
+        appBar: AppBar(title: const Text('App Bar'),),
+        body: Column(mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Contador: $_value',
+            ),
+            Row(mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TextButton(
+                  child: const Text('incrementar'),
+                  onPressed: () {
+                    setState(() {
+                      _increment();
+                    });
+                  },
+                ),
+                TextButton(
+                  child: const Text('Decrementar'),
+                  onPressed: () {
+                    setState(() {
+                      _decrement();
+                    });
+                  },
+                ),
+                TextButton(
+                  child: const Text('Zerar contador'),
+                  onPressed: () {
+                    setState(() {
+                      _value = 0;
+                      print('Removeu');
+                    });
+                  },
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+void main() => runApp(MaterialWidget());
