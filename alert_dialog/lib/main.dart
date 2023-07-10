@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   print('clicou no cancelar');
                   Navigator.of(context).pop();
                 },
-                child: const Text('ok'),
+                child: const Text('Calcelar'),
               );
               //configuração do meu alert
               AlertDialog alert = AlertDialog(
