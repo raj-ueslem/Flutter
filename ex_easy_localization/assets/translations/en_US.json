@@ -1,0 +1,18 @@
+{
+  "hello": "hello",
+  "screens": {
+    "titles": {
+      "message": "Welcome"
+    }
+  },
+
+  "message":"{} are written in the {} language",
+  "message_named":"Easy localization is written in the {language} language",
+  "message_mixed":"{} are written in the {language} language",
+
+  "example": {
+    "hello": "Hello",
+    "world": "World!",
+    "helloWorld": "@:example.hello @:example.world"
+  }
+}
